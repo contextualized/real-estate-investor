@@ -1,17 +1,8 @@
-"""BC Real Estate Investment Analyzer - Main Entry Point.
+"""BC Real Estate Investment Analyzer - Streamlit App.
 
-This is a wrapper that loads the actual Streamlit app from streamlit_app/app.py.
-Required for Streamlit Community Cloud deployment.
+Main entrypoint with three tabs for buyer, seller, and comparison analysis.
 """
 
-import sys
-from pathlib import Path
-
-# Add streamlit_app to Python path
-streamlit_app_dir = Path(__file__).parent / "streamlit_app"
-sys.path.insert(0, str(streamlit_app_dir))
-
-# Import and run the actual app
 import streamlit as st
 
 # Page configuration
