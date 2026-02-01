@@ -1,0 +1,40 @@
+# Test configuration file (mirrors defaults.toml)
+
+[bc_tax_rates]
+ptt_tiers = [
+    [200000, 0.01],
+    [2000000, 0.02],
+    [3000000, 0.03],
+]
+ptt_luxury_rate = 0.05
+
+first_time_buyer_full_exemption_threshold = 500000
+first_time_buyer_partial_exemption_threshold = 835000
+first_time_buyer_partial_exemption_amount = 8000
+first_time_buyer_phase_out_start = 835000
+first_time_buyer_phase_out_end = 860000
+
+newly_built_full_exemption_threshold = 1100000
+newly_built_phase_out_start = 1100000
+newly_built_phase_out_end = 1150000
+
+speculation_tax_resident = 0.01
+speculation_tax_foreign = 0.03
+
+homeowner_grant_threshold = 2075000
+homeowner_grant_amount = 570
+
+[assumptions]
+capital_gains_inclusion = 0.50
+capital_gains_inclusion_high = 0.6667
+
+realtor_commission_structure = [
+    [100000, 0.07],
+    [999999999, 0.025],
+]
+
+legal_fees = 1750
+title_insurance = 300
+appraisal_fee = 400
+home_inspection = 600
+legal_fees_sale = 1500

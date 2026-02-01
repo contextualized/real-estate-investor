@@ -1,0 +1,61 @@
+# BC Real Estate Tax Rates and Assumptions (2026)
+
+[bc_tax_rates]
+# Property Transfer Tax (PTT) tiered structure
+# Format: [[threshold, rate], ...]
+ptt_tiers = [
+    [200000, 0.01],      # 1% on first $200k
+    [2000000, 0.02],     # 2% from $200k to $2M
+    [3000000, 0.03],     # 3% from $2M to $3M
+]
+ptt_luxury_rate = 0.05   # 5% above $3M
+
+# First-Time Home Buyer Exemption
+first_time_buyer_full_exemption_threshold = 500000
+first_time_buyer_partial_exemption_threshold = 835000
+first_time_buyer_partial_exemption_amount = 8000
+first_time_buyer_phase_out_start = 835000
+first_time_buyer_phase_out_end = 860000
+
+# Newly Built Home Exemption
+newly_built_full_exemption_threshold = 1100000
+newly_built_phase_out_start = 1100000
+newly_built_phase_out_end = 1150000
+
+# Speculation and Vacancy Tax
+speculation_tax_resident = 0.01      # 1% for BC residents
+speculation_tax_foreign = 0.03       # 3% for foreign owners
+
+# BC Home Owner Grant
+homeowner_grant_threshold = 2075000  # $2.075M assessed value threshold
+homeowner_grant_amount = 570         # $570 annual grant
+
+[assumptions]
+# Capital Gains Tax
+capital_gains_inclusion = 0.50       # 50% inclusion rate (default)
+capital_gains_inclusion_high = 0.6667 # 66.67% inclusion rate (alternative)
+
+# Realtor Commission Structure
+# Format: [[threshold, rate], ...]
+realtor_commission_structure = [
+    [100000, 0.07],      # 7% on first $100k
+    [999999999, 0.025],  # 2.5% on remainder
+]
+
+# Closing Costs (typical estimates)
+legal_fees = 1750
+title_insurance = 300
+appraisal_fee = 400
+home_inspection = 600
+legal_fees_sale = 1500
+
+# CMHC Mortgage Insurance Rates (by LTV ratio)
+# Format: [[max_ltv, premium_rate], ...]
+cmhc_insurance_rates = [
+    [0.65, 0.0060],   # Up to 65% LTV: 0.60%
+    [0.75, 0.0170],   # 65.01-75% LTV: 1.70%
+    [0.80, 0.0240],   # 75.01-80% LTV: 2.40%
+    [0.85, 0.0280],   # 80.01-85% LTV: 2.80%
+    [0.90, 0.0310],   # 85.01-90% LTV: 3.10%
+    [0.95, 0.0400],   # 90.01-95% LTV: 4.00%
+]
